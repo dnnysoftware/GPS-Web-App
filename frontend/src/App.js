@@ -8,6 +8,7 @@ function App() {
   const [startCity, setStartCity] = useState('');
   const [endCity, setEndCity] = useState('');
   const [searchType, setSearchType] = useState('');
+  const [pathResult, setPathResult] = useState('');
 
   const handleSearch = () => {
     // Perform search using startCity, endCity, and searchType values
@@ -17,7 +18,7 @@ function App() {
       .then(response => response.text())
       .then(data => {
         // Handle the response data
-        console.log('Search Results:', data);
+        setPathResult(data);
       })
       .catch(error => {
         // Handle any errors
@@ -36,9 +37,18 @@ function App() {
         setSearchType={setSearchType}
         handleSearch={handleSearch}
       />
+      <CountryMap path={pathResult}/>
     </div>
   );
 }
+
+
+function CountryMap(props) {
+  return (
+    <p>{props.path}</p>
+  );
+}
+
 
 function SearchBar(props) {
   const {
