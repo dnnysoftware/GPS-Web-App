@@ -200,9 +200,9 @@ public class Search {
     public String searchMethods(String type) {
         try {
             String path;
-            if (type == "BFS") {
+            if (type.equals("BFS")) {
                 path = processBFS();
-            } else if (type == "DFS") {
+            } else if (type.equals("DFS")) {
                 path = processDFS();
             } else {
                 path = processAStar();
