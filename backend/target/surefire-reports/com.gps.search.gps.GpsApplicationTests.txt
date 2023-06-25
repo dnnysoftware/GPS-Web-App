@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.gps.search.gps.GpsApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.223 s - in com.gps.search.gps.GpsApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.271 s - in com.gps.search.gps.GpsApplicationTests
