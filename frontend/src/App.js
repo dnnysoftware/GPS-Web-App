@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import CountryMap from './CountryMap';
 import { Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import city from './resources/city.dat';
 import './App.css';
+
 
 function App() {
   const [startCity, setStartCity] = useState('');
@@ -39,13 +41,6 @@ function App() {
       />
       <CountryMap path={pathResult}/>
     </div>
-  );
-}
-
-
-function CountryMap(props) {
-  return (
-    <p>{props.path}</p>
   );
 }
 
