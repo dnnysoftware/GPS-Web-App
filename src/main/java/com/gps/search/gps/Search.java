@@ -156,50 +156,53 @@ public class Search {
      * Sets up the BFS algorithm
      * @return the formatted string result for BFS
      */
-    public String processBFS() {
+    public Path processBFS() {
         sortAscendingNeighbors();
         CityNode startCity = this.cityData.get(this.startCity);
         CityNode endCity = this.cityData.get(this.endCity);
         BFS bfs = new BFS(startCity, endCity);
         List<CityNode> bfsPath = bfs.traverse();
-        String bsfOutput = outputProcessing(bfsPath, "Breadth-First Search Results: ");
-        return bsfOutput;
+        String bfsOutput = outputProcessing(bfsPath, "Breadth-First Search Results: ");
+        Path path = new Path(bfsPath, bfsOutput);
+        return path;
     }
 
     /**
      * Sets up the DFS algorithm
      * @return the formatted string result for DFS
     */
-    public String processDFS() {
+    public Path processDFS() {
         sortDescendingNeighbors();
         CityNode startCity = this.cityData.get(this.startCity);
         CityNode endCity = this.cityData.get(this.endCity);
         DFS dfs = new DFS(startCity, endCity);
         List<CityNode> dfsPath = dfs.traverse();
-        String dsfOutput = outputProcessing(dfsPath, "Depth-First Search Results: ");
-        return dsfOutput;
+        String dfsOutput = outputProcessing(dfsPath, "Depth-First Search Results: ");
+        Path path = new Path(dfsPath, dfsOutput);
+        return path;
     }
 
     /**
      * Sets up the A* algorithm
      * @return the formatted string result for A*
      */
-    public String processAStar() {
+    public Path processAStar() {
         CityNode startCity = this.cityData.get(this.startCity);
         CityNode endCity = this.cityData.get(this.endCity);
         AStar aStar = new AStar(startCity, endCity);
         List<CityNode> aStarPath = aStar.traverse();
         String aStarOutput = outputProcessing(aStarPath, "A* Search Results: ");
-        return aStarOutput;
+        Path path = new Path(aStarPath, aStarOutput);
+        return path;
     }
 
     /**
      * Calls all possible search methods to search by
      * @return a composite string of search results
      */
-    public String searchMethods(String type) {
+    public Path searchMethods(String type) {
         try {
-            String path;
+            Path path;
             if (type.equals("BFS")) {
                 path = processBFS();
             } else if (type.equals("DFS")) {
@@ -210,7 +213,7 @@ public class Search {
             return path;
         } catch(Exception e) {
             e.printStackTrace();
-            return "";
+            return null;
         }
     }
 

@@ -10,17 +10,22 @@ function App() {
   const [startCity, setStartCity] = useState('');
   const [endCity, setEndCity] = useState('');
   const [searchType, setSearchType] = useState('');
-  const [pathResult, setPathResult] = useState('');
+  const [pathResult, setPathResult] = useState({
+    description: '',
+    path: [],
+  });
+
 
   const handleSearch = () => {
     // Perform search using startCity, endCity, and searchType values
     const url = `/search?start=${startCity}&end=${endCity}&type=${searchType}`;
 
     fetch(url)
-      .then(response => response.text())
+      .then(response => response.json())
       .then(data => {
         // Handle the response data
-        setPathResult(data);
+        const { description, path } = data;
+        setPathResult({ description, path });
       })
       .catch(error => {
         // Handle any errors

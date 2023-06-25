@@ -7,7 +7,6 @@ Nashville 	Atlanta
 Denver          SantaFe
 Denver          Cheyenne
 SaintPaul 	DesMoines
-KansasCity 	OklahomaCity
 OklahomaCity    Austin
 Topeka 	        OklahomaCity
 Madison 	Springfield
@@ -49,8 +48,7 @@ SantaFe         OklahomaCity
 Jackson 	BatonRouge
 Austin  	LittleRock
 SaltLakeCity	Sacramento
-SantaFe 	Phoenix 
-Flagstaff	SantaFe
+SantaFe 	Phoenix
 Montgomery	Jackson
 SaltLakeCity	Denver
 Atlanta 	Tallahassee
@@ -71,3 +69,9 @@ CarsonCity	Boise
 Lincoln 	Topeka
 Montpelier	Hartford
 Boston		Montpelier
+Albany		Harrisburg
+Albany		Montpelier
+Pierre		Bismark
+Pierre		Lincoln
+Pierre		Cheyenne
+SaltLakeCity		Sacramento
