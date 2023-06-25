@@ -22,7 +22,7 @@ function CountryMap(props) {
                     {geographies.map(geo => (
                     <Geography
                         key={geo.rsmKey}
-                        stroke="#FFF"
+                        stroke="#000"
                         geography={geo}
                         fill="#DDD"
                     />
