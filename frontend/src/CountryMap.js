@@ -80,7 +80,7 @@ function CountryMap(props) {
                     key={`line-${index}`}
                     from={[point.longitude, point.latitude]}
                     to={[props.path.path[index + 1].longitude, props.path.path[index + 1].latitude]}
-                    stroke="#000"
+                    stroke="#08aca2"
                     strokeWidth={1}
                 />
                 ) : null

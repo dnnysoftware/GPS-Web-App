@@ -27,15 +27,18 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The State Capital GPS Search Project
 
-![State Captial GPS Search](img/Captials-Map.png)
 ![My Demo](img/demo.png)
+![State Captial GPS Search](img/Captials-Map.png)
 
-Description Here
+This project is a web application designed to have users search for paths between state capitals using several search algorithm types such as A* Search, BFS and DFS (arranged from most efficient/least cost to the least efficient/most cost in regards to how many miles it takes to travel from a start to end position). Each city node is highlighted on the map and when the search algorithm takes place the path using a specific search algorithm is shown highlighted in green.
 
 At Runtime: 
-* HERE
+* Docker runs both web server containers (react and springboot).
+* Person uses the drop-down menus to choose a start city, end city and search algorithm type.
+* Springboot web server returns a description of the path and how many miles it took as well as an ordered list of CityNodes which contain latitude and longitude information to be displayed.
+* React web server updates component and displays the path and highlights the CityNodes on that path.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -44,10 +47,21 @@ At Runtime:
 ### Built With
 
 Languages:
-* HERE
+* Javascript
+* Java
+* CSS
+
+Frameworks:
+* React
+* Springboot
+* React-Bootstrap
+
+Platforms:
+* Docker
 
 Libraries:
-* HERE
+* react-simple-maps
+* java.util / java.Math / java.lang
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,37 +69,22 @@ Libraries:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-How To Get Started HERE
+Make sure to have Docker installed with Docker Desktop and the ability to run `docker compose` once you do you can move forware with the installation instructions.
 
 ### Installation
 
-#### WITH GUI
 1. Clone the repo
   ```sh
   git clone https://github.com/dnnysoftware/GPS-Web-App.git
   ```
-2. Give file execute permissions to run.sh
+2. Make sure to have Docker installed 
   ```sh
-  chmod +x run.sh
+  docker info
   ```
-3. Run Program
-  * In root directory run by typing in CLI
+3. Run the docker-compose.yml file 
   ```sh
-  ./run.sh
+  docker-compose -f docker-compose.yml up
   ```
-
-#### WITHOUT GUI
-1. Clone the repo
-  ```sh
-  git clone https://github.com/dnnysoftware/GPS-Web-App.git
-  ```
-2. Build the Docker Image
-  ```sh
-  docker build -t your-docker-username/your-project-name:your-version-number .
-  ```
-2. Run Docker Image
-  ```sh
-  docker run -it your-docker-username/your-project-name:your-version-number .
-  ```
+4. Open your browser and copy and paste `http://localhost:3000` and HAVE FUN!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
