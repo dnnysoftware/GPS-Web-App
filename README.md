@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
 
 <!-- TABLE OF CONTENTS -->
@@ -69,7 +68,7 @@ Libraries:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Make sure to have Docker installed with Docker Desktop and the ability to run `docker compose` once you do you can move forware with the installation instructions.
+Make sure to have Docker installed with Docker Desktop and the ability to run `docker-compose` once you do you can move forware with the installation instructions.
 
 ### Installation
 
